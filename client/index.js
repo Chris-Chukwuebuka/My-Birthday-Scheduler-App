@@ -35,7 +35,7 @@ const scheduleBirthDay = async (event) => {
     }
 
     const response = await fetch(
-      "https://birthday-reminder-nmsv.onrender.com/admin/birthday",
+      "https://my-birthday-scheduler-app.onrender.com",
       {
         method: "POST",
         body: JSON.stringify(birthdayData),
