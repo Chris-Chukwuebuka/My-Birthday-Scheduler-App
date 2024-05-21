@@ -14,7 +14,7 @@ const {
 
 // Schedule the sendBirthdayReminder function to run every day at 8:00 AM
 cron.schedule(
-  "0 12 * * *",
+  "0 13 * * *",
   async () => {
     await sendBirthdayMessage();
     await sendADayReminderToAdmin();
@@ -26,7 +26,7 @@ cron.schedule(
 );
 
 // Schedule the sendMonthlyReminder function to run every 1st day of the month at 10:00 AM
-cron.schedule("0 12 1 * *", async () => {
+cron.schedule("0 13 1 * *", async () => {
   await sendMonthlyReminder();
 });
 // Start the server
