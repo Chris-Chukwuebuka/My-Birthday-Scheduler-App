@@ -25,7 +25,7 @@ mongoose
 
 // Schedule the sendBirthdayReminder function to run every day at 8:00 AM
 cron.schedule(
-  "0 9 * * *",
+  "0 10 * * *",
   async () => {
     await sendBirthdayMessage();
     await sendADayReminderToAdmin();
@@ -37,7 +37,7 @@ cron.schedule(
 );
 
 // Schedule the sendMonthlyReminder function to run every 1st day of the month at 9:00 AM
-cron.schedule("0 9 1 * *", async () => {
+cron.schedule("0 10 1 * *", async () => {
   await sendMonthlyReminder();
 });
 // Start the server

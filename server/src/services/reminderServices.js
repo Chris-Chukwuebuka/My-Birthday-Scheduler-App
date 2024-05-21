@@ -14,7 +14,7 @@ const sendMonthlyReminder = async () => {
   if (users || users.length > 0) {
     for (const user of users) {
       await sendMonthlyReminderToAdmin(
-        "etosin70@gmail.com",
+        "chrischukwuebuka09@gmail.com",
         user?.firstName,
         user?.lastName
       );
@@ -50,7 +50,7 @@ const sendADayReminderToAdmin = async () => {
   if (users || users.length > 0) {
     for (const user of users) {
       await sendOneDayReminderToAdmin(
-        "etosin70@gmail.com",
+        "chrischukwuebuka09@gmail.com",
         user?.firstName,
         user?.lastName
       );
