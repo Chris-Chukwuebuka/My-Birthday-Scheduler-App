@@ -7,6 +7,11 @@ const sanitizer = require("perfect-express-sanitizer");
 
 
 
+
+
+app.use(cors());
+app.use(express.json());
+
 app.use(
   sanitizer.clean({
     xss: true,
@@ -14,9 +19,6 @@ app.use(
     sql: true,
   })
 );
-
-app.use(cors());
-app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("server is live");
