@@ -3,6 +3,17 @@ const cors = require("cors");
 const app = express();
 const userRouter = require("./route/userRoute");
 const adminRouter = require("./route/adminRoute");
+const sanitizer = require("perfect-express-sanitizer");
+
+
+
+app.use(
+  sanitizer.clean({
+    xss: true,
+    nosql: true,
+    sql: true,
+  })
+);
 
 app.use(cors());
 app.use(express.json());

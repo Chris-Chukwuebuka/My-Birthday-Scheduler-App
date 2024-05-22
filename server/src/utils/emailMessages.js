@@ -1,5 +1,5 @@
 const transporter = require("./smtpServer");
-const { USER_EMAIL } = require("../config/dotEnv");
+const { SMTP_USER:USER_EMAIL } = require("../config/dotEnv");
 
 const sendMonthlyReminderToAdmin = async (adminEmail, firstName, lastName) => {
   const mailOptionsOneMonth = {
